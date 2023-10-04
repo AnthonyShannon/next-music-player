@@ -1,6 +1,4 @@
-'use client'
-
-import { signIn } from "next-auth/react";
+import { getProviders, signIn } from "next-auth/react";
 
 const Login = () => {
 
