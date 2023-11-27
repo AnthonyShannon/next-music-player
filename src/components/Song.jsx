@@ -5,7 +5,7 @@ const Song = ({ order, track }) => {
     const spotifyApi = useSpotify();
 
     return (
-        <div className="grid grid-cols-2 text-gray-500">
+        <div className="grid grid-cols-2 text-gray-500 py-2 px4 hover:bg-gray-900 cursor-pointer">
             <div className="flex items-center space-x-4">
                 <p>{order + 1}</p>
                 <img className="h-10 w-10" src={track.track.album.images[0].url}
@@ -16,7 +16,7 @@ const Song = ({ order, track }) => {
                 </div>
             </div>
             <div className="flex items-center justify-between ml-auto md:ml-0">
-                <p className="hidden md:inline">{track.track.album.name}</p>
+                <p className="w-40 hidden md:inline">{track.track.album.name}</p>
                 <p>{millisecondsToMinutes(track.track.duration_ms)}</p>
             </div>
         </div>
