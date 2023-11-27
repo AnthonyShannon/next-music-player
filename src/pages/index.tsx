@@ -1,6 +1,7 @@
 import { getSession } from "next-auth/react"
 import Sidebar from "@/components/Sidebar";
 import Center from "@/components/Center";
+import { GetServerSidePropsContext } from "next";
 
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
   )
 }
 
-export async function getServerSideProps(context: any) {
+export async function getServerSideProps(context: GetServerSidePropsContext) {
   const session = await getSession(context);
 
   return {
