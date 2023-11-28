@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
-import { useSession } from 'next-auth/react'
+import { signOut, useSession } from 'next-auth/react'
 import { shuffle } from 'lodash';
 import { useRecoilState } from 'recoil';
 import { playlistIdState, playlistState } from '../atoms/playlistAtom';
@@ -38,7 +38,9 @@ const Center = () => {
     return (
         <div className="flex-grow h-screen overflow-y-scroll scrollbar-hide">
             <header className='absolute top-5 right-8'>
-                <div className='flex items-center bg-black space-x-3 opacity-90 hover:opacity-80 cursor-pointer rounded-full p-1 pr-2'>
+                <div
+                    onClick={signOut}
+                    className='flex items-center bg-black space-x-3 opacity-90 hover:opacity-80 cursor-pointer rounded-full p-1 pr-2'>
                     <img
                         className='rounded-full w-10 h-10'
                         src={session?.user?.image} alt='' />
@@ -54,9 +56,9 @@ const Center = () => {
                     <h1 className='text-2xl md:text-3xl xl:text-5xl font-bold'>{playlist?.name}</h1>
                 </div>
             </section>
-                <div>
-                    <Songs />
-                </div>
+            <div>
+                <Songs />
+            </div>
         </div>
     )
 }
