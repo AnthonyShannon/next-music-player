@@ -19,9 +19,9 @@ const useSongInfo = () => {
                         }
                     }
                 ).then(res => res.json())
+                setSongInfo(trackInfo);
             }
 
-            setSongInfo(trackInfo);
         }
 
         fetchSongInfo();
