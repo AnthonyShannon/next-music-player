@@ -17,6 +17,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/api/auth/[...nextauth].js", "src/components/Sidebar.jsx", "src/components/Center.jsx", "src/components/Center.jsx", "src/pages/_middleware.js", "src/pages/login.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/api/auth/[...nextauth].js", "src/components/Sidebar.jsx", "src/components/Center.jsx", "src/components/Center.jsx", "src/pages/_middleware.js", "src/pages/login.jsx", "src/pages/index.js"],
   "exclude": ["node_modules"]
 }
